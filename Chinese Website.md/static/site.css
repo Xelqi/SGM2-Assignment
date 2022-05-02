@@ -241,14 +241,39 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-dark-grey,.w3-hover-border-dark-grey:hover,.w3-border-dark-gray,.w3-hover-border-dark-gray:hover{border-color:#616161!important}
 .w3-border-pale-red,.w3-hover-border-pale-red:hover{border-color:#ffe7e7!important}.w3-border-pale-green,.w3-hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
-     
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
+   
+* {
+  box-sizing: border-box;
 }
-.container {
-  position: relative;
-  text-align: center;
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px gray;
+  float: left;
+  width: 80%;
+  background: #fff;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #ff3333;
   color: white;
+  font-size: 17px;
+  border-color: #ff3333;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #ffcccc;
+  border-color: #ffcccc;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
 }
