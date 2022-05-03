@@ -1,3 +1,6 @@
+{% load static %}
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="../static/site.css">
+    <link rel="stylesheet" href="{% static 'site.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -23,15 +26,15 @@
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
 
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Booking.com</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Hotels</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Flights</a>
-    <a href="#carrentals" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Car Rentals</a>
-    <a href="#attractions" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Attractions</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact</a> 
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">{% trans "Hotels"}</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">{% trans "Flights %}</a>
+    <a href="#carrentals" class="w3-bar-item w3-button w3-padding-large w3-hide-small">{% trans "Car Rentals" %}</a>
+    <a href="#attractions" class="w3-bar-item w3-button w3-padding-large w3-hide-small">{% trans "Attractions" %}</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">{% trans "Contact" %}</a> 
 
     <a href="#contact" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
     <a href="#contact" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <a href="#signup" class="w3-bar-item w3-button w3-padding-large w3-right">Sign Up/Register</a>
+    <a href="#signup" class="w3-bar-item w3-button w3-padding-large w3-right">{% trans "Sign Up/Register" %}</a>
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
     
   </div>
@@ -44,22 +47,22 @@
   <div class="mySlides w3-display-container w3-center">
     <img src="../static/dest0.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>China</h3>
-      <p><b>Explore the cities, mountains and culture of China</b></p>
+      <h3>{% trans "China" %}</h3>
+      <p><b>{% trans "Explore the cities, mountains and culture of China" %}</b></p>
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center">
     <img src="../static/dest1.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>South Korea</h3>
-      <p><b>Discover the culture and technology of South Korea</b></p>
+      <h3>{% trans "South Korea" %}</h3>
+      <p><b>{% trans "Discover the culture and technology of South Korea" %}</b></p>
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center">
     <img src="../static/dest2.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Japan</h3>
-      <p><b>Lose yourself in the cities of Japan</b></p>
+      <h3>{% trans "Japan" %}</h3>
+      <p><b>{% trans "Lose yourself in the cities of Japan" %}</b></p>
     </div>
   </div>
   <form class="example" action="#" style="margin:auto;max-width:600px" class="w3-round">
@@ -68,43 +71,43 @@
   </form>
 
     <!-- The Flights Section -->
-  <div class="w3-black" id="tour">
+  <div class="w3-gray" id="tour">
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center">Cheap Flights</h2>
-      <p class="w3-opacity w3-center"><i>Remember to book your tickets in advance</i></p><br>
+      <h2 class="w3-wide w3-center">{% trans "Cheap Flights"</h2>
+      <p class="w3-opacity w3-center"><i>{% trans "Remember to book your tickets in advance" %}</i></p><br>
 
       <ul class="w3-ul w3-border w3-white w3-text-grey">
-        <li class="w3-padding">Paris 12-05</li>
-        <li class="w3-padding">Ireland 14-05</li>
-        <li class="w3-padding">Poland 14-05</li>
+        <li class="w3-padding">{% trans "Paris 12-05" %}</li>
+        <li class="w3-padding">{% trans "Ireland 14-05" %}</li>
+        <li class="w3-padding">{% trans "Poland 14-05" %}</li>
       </ul>
 
       <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
         <div class="w3-third w3-margin-bottom">
           <img src="../static/bk.jpg" alt="Mountain" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
-            <p><b>Bangkok</b></p>
-            <p class="w3-opacity">Fri 27 Nov 2022</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+            <p><b>{% trans "Bangkok" %}</b></p>
+            <p class="w3-opacity">{% trans "Friday 27 Nov 2022" %}</p>
+            <p>{% trans "With tropical weather and ornamental shrines, visit today!" %}</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">{% trans "Buy Tickets" %}</button>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
           <img src="../static/paris.jpg" alt="Castle" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
-            <p><b>Paris</b></p>
-            <p class="w3-opacity">Sat 28 Nov 2022</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+            <p><b>{% trans "Paris" %}</b></p>
+            <p class="w3-opacity">{% trans "Saturday 28 Nov 2022" %}</p>
+            <p>{% trans "The iconic city of love. With historic sites and the Eiffel tower, how can you go wrong?" %}</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">{% trans "Buy Tickets" %}</button>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
           <img src="../static/prague.jpg" alt="cityline" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
-            <p><b>Prague</b></p>
-            <p class="w3-opacity">Sun 29 Nov 2022</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+            <p><b>{% trans "Prague" %}</b></p>
+            <p class="w3-opacity">{% trans "Sunday 29 Nov 2022" %}</p>
+            <p>{% trans "History is on every street. Come visit the musuems and walkways of Prague." %}</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">{% trans "Buy Tickets" %}</button>
           </div>
         </div>
       </div>
@@ -113,41 +116,41 @@
 
   <!-- Hotels section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide">Currently Trending Hotels</h2>
-    <p class="w3-opacity"><i>You won't find better</i></p>
-    <p class="w3-justify">For many of us, the earth’s awe-inspiring natural beauty is what makes us want to travel far and catch a glimpse of
+    <h2 class="w3-wide">{% trans "Currently Trending Hotels" %}</h2>
+    <p class="w3-opacity"><i>{% trans "You won't find better" %}</i></p>
+    <p class="w3-justify"> {% trans "For many of us, the earth’s awe-inspiring natural beauty is what makes us want to travel far and catch a glimpse of
       mother nature’s wonders. From colossal glaciers meandering down mountainsides to caves sculpted by lava,
       here are five places to see nature’s most captivating sights, plus convenient, sustainability-minded places to stay.
 
       As travel starts to feel like an exciting reality again, we’ve compiled the top destinations for rediscovering the world in 2022.
       A combination of destinations on the rise and favorites from Booking.com’s travel community, these places range from charming Welsh
-      seaside towns to Taiwan’s second largest city where you’ll find a blend of vibrant night markets and historic temples.</p>
+      seaside towns to Taiwan’s second largest city where you’ll find a blend of vibrant night markets and historic temples. " %}</p>
 
     <div class="w3-row w3-padding-32">
       <div class="w3-third">
-        <p>Bangkok</p>
+        <p>{% trans "Bangkok" %}</p>
         <img src="../static/bk.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
       </div>
       <div class="w3-third">
-        <p>South Korea</p>
+        <p>{% trans "South Korea" %}</p>
         <img src="../static/seoul.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
       </div>
       <div class="w3-third">
-        <p>Paris</p>
+        <p>{% trans "Paris" %}</p>
         <img src="../static/paris.jpg" class="w3-round" alt="Random Name" style="width:60%">
       </div>
     </div>
     <div class="w3-row w3-padding-32">
       <div class="w3-third">
-        <p>Japan</p>
+        <p>{% trans "Japan" %}</p>
         <img src="../static/tokyo.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
       </div>
       <div class="w3-third">
-        <p>Netherlands</p>
+        <p>{% trans "Netherlands" %}</p>
         <img src="../static/amster.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
       </div>
       <div class="w3-third">
-        <p>Czech Republic</p>
+        <p>{% trans "Czech Republic" %}</p>
         <img src="../static/prague.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
       </div>
     </div>
@@ -159,27 +162,27 @@
       <header class="w3-container w3-teal w3-center w3-padding-32"> 
         <span onclick="document.getElementById('ticketModal').style.display='none'" 
        class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>{% trans "Tickets" %}</h2>
       </header>
       <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i> Flights cost €30</label></p>
+        <p><label><i class="fa fa-shopping-cart"></i> {% trans "Flights cost ¥300" %}</label></p>
         <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
+        <p><label><i class="fa fa-user"></i>{% trans "Send To" %}</label></p>
         <input class="w3-input w3-border" type="text" placeholder="Enter email">
         <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">{% trans "Close" %} <i class="fa fa-remove"></i></button>
+        <p class="w3-right">{% trans "Need" <a href="#" class="w3-text-blue">"help?" %}</a></p>
       </div>
     </div>
   </div>
 
 
   <!-- Car rental section -->
-  <div class="w3-black" id="carrentals">
+  <div class="w3-gray" id="carrentals">
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center">CAR RENTALS</h2>
-      <p class="w3-justify">Car hire for any kind of trip
-Compare deals from the biggest car hire companies
+      <h2 class="w3-wide w3-center">{% trans "CAR RENTALS" %}</h2>
+      <p class="w3-justify">{% "Car hire for any kind of trip
+Compare deals from the biggest car hire companies" %}
     <form class="example" action="#" style="margin:auto;max-width:600px" class="w3-round">
       <input type="text" placeholder="Pick up location" name="Location">
       <input type="text" placeholder="Date of Arrival" name="dateout">
@@ -196,73 +199,73 @@ Compare deals from the biggest car hire companies
       <div class="w3-third w3-margin-bottom">
         <img src="../static/bk.jpg" alt="Bangkok" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><a href="#"><b>Bangkok</b></a></p>
+          <p><a href="#"><b>{% trans "Bangkok" %}</b></a></p>
         </div>
       </div>
       <div class="w3-third w3-margin-bottom">
         <img src="../static/paris.jpg" alt="Castle" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><a href="#"><b>Disneyland Paris</b></a></p>
+          <p><a href="#"><b>{% trans "Disneyland Paris" %}</b></a></p>
         </div>
       </div>
       <div class="w3-third w3-margin-bottom">
         <img src="../static/prague.jpg" alt="cityline" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><a href="#"><b>Prague</b></a></p>
+          <p><a href="#"><b>{% trans "Prague" %}</b></a></p>
         </div>
       </div>
       <div class="w3-third w3-margin-bottom">
         <img src="../static/seoul.jpg" alt="Seoul" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><a href="#"><b>Seoul</b></a></p>
+          <p><a href="#"><b>{% trans "Seoul"</b></a></p>
         </div>
       </div>
       <div class="w3-third w3-margin-bottom">
         <img src="../static/amster.jpg" alt="Canals" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><a href="#"><b>Amsterdam Canals</b></a></p>
+          <p><a href="#"><b>{% trans "Amsterdam Canals" %}</b></a></p>
         </div>
       </div>
       <div class="w3-third w3-margin-bottom">
         <img src="../static/tokyo.jpg" alt="Tokyo streets" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><a href="#"><b>Tokyo City</b></a></p>
+          <p><a href="#"><b>{% trans "Tokyo City" %}</b></a></p>
         </div>
       </div>
       <div class="w3-third w3-margin-bottom">
         <img src="../static/bk.jpg" alt="Bangkok" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><a href="#"><b>Bangkok</b></a></p>
+          <p><a href="#"><b>{% trans "Bangkok" %}</b></a></p>
         </div>
       </div>
       <div class="w3-third w3-margin-bottom">
         <img src="../static/paris.jpg" alt="Castle" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><a href="#"><b>Disneyland Paris</b></a></p>
+          <p><a href="#"><b>{% trans "Disneyland Paris" %}</b></a></p>
         </div>
       </div>
       <div class="w3-third w3-margin-bottom">
         <img src="../static/prague.jpg" alt="cityline" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><a href="#"><b>Prague</b></a></p>
+          <p><a href="#"><b>{% trans "Prague" %}</b></a></p>
         </div>
       </div>
       <div class="w3-third w3-margin-bottom">
         <img src="../static/seoul.jpg" alt="Seoul" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><a href="#"><b>Seoul</b></a></p>
+          <p><a href="#"><b>{% trans "Seoul" %}</b></a></p>
         </div>
       </div>
       <div class="w3-third w3-margin-bottom">
         <img src="../static/amster.jpg" alt="Canals" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><a href="#"><b>Amsterdam Canals</b></a></p>
+          <p><a href="#"><b>{% trans "Amsterdam Canals" %}</b></a></p>
         </div>
       </div>
       <div class="w3-third w3-margin-bottom">
         <img src="../static/tokyo.jpg" alt="Tokyo streets" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><a href="#"><b>Tokyo City</b></a></p>
+          <p><a href="#"><b>{% trans "Tokyo City" %}</b></a></p>
         </div>
       </div>
     </div>
@@ -273,14 +276,14 @@ Compare deals from the biggest car hire companies
 
   <!-- Contact Section -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
-    <p class="w3-opacity w3-center"><i>Get in contact with a passionate member of our customer service team</i></p>
+    <h2 class="w3-wide w3-center">{% trans "CONTACT" %}</h2>
+    <p class="w3-opacity w3-center"><i>{% trans "Get in contact with a passionate member of our customer service team" %}</i></p>
     <div class="w3-row w3-padding-32">
 
       <div class="w3-col m6 w3-large w3-margin-bottom">
         <i class="fa fa-map-marker" style="width:30px"></i> Dublin, Ireland<br>
-        <i class="fa fa-phone" style="width:30px"></i> Phone: +353 999999999<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: booking@mail.com<br>
+        <i class="fa fa-phone" style="width:30px"></i> {% trans "Phone: " %} +353 999999999<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> {% trans "Email: " %} booking@mail.com<br>
       </div>
 
       <div class="w3-col m6">
@@ -294,7 +297,7 @@ Compare deals from the biggest car hire companies
             </div>
           </div>
           <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+          <button class="w3-button w3-black w3-section w3-right" type="submit">{% trans "SEND" %}</button>
         </form>
       </div>
     </div>
